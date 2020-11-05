@@ -8,7 +8,7 @@ on:
     - cron: '0 17 * * *'
 
 jobs:
-  csdn-emailbot:
+  qiandao:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -30,7 +30,7 @@ jobs:
           server_port: 465
           username: ${{ secrets.MAILUSERNAME }}
           password: ${{ secrets.MAILPASSWORD }}
-          subject: 市场收益
+          subject: 阴阳师签到情况
           body: file://result.txt
           to: 568654196@qq.com
           from: GitHub Actions

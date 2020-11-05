@@ -32,7 +32,4 @@ res = conn.getresponse()
 data = res.read()
 result = json.loads(data)
 with open("result.txt","a+",encoding="utf-8") as f:
-  if result['code']=="200":
-    f.write("签到成功")
-  else:
-    f.write("签到失败")
+    f.write(data.decode("utf-8"))

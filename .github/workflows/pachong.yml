@@ -8,7 +8,7 @@ on:
     - cron: '0 16 * * *'
 
 jobs:
-  csdn-emailbot:
+  pachong:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
