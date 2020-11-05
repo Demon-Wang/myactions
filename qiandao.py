@@ -1,5 +1,6 @@
+# -*- coding: utf-8 -*-
 import http.client
-import mimetypes
+import json
 conn = http.client.HTTPSConnection("god-welfare.gameyw.netease.com")
 payload = "{\"rewardBagId\":\"5b557b14550f0256f7620be3\",\"appKey\":\"g37\",\"roleId\":\"58db9dc455a961299a0647f9\",\"server\":\"15024\",\"gameId\":\"\"}"
 headers = {
@@ -29,4 +30,9 @@ headers = {
 conn.request("POST", "/v1/welfare/applyRewardV2?ts=1604563599&uf=2cf89fcce8cb4438b7d50a936bab82b200&ab=d0de6ff590433236a7ccd32e81dd462a8a&ef=5af887a2718532b3647ec15c79f620b05f", payload, headers)
 res = conn.getresponse()
 data = res.read()
-print(data.decode("utf-8"))
+result = json.loads(data)
+with open("result.txt","a+",encoding="utf-8") as f:
+  if result['code']=="200":
+    f.write("签到成功")
+  else:
+    f.write("签到失败")
