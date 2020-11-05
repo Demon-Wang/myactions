@@ -1,9 +1,9 @@
-name: 'GitHub Actions CSDN Email Bot'
+name: 'pachong'
 
 on:
   push:
     branches: 
-      - master
+      - main
   schedule:
     - cron: '0 14 * * *'
 
