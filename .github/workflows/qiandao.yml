@@ -31,7 +31,7 @@ jobs:
           username: ${{ secrets.MAILUSERNAME }}
           password: ${{ secrets.MAILPASSWORD }}
           subject: 市场收益
-          body: 签到成功
+          body: file://result.txt
           to: 568654196@qq.com
           from: GitHub Actions
           content_type: text/plain
