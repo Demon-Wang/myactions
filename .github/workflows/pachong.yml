@@ -5,7 +5,7 @@ on:
     branches: 
       - main
   schedule:
-    - cron: '0 14 * * *'
+    - cron: '* * */1 * *'
 
 jobs:
   csdn-emailbot:
@@ -31,7 +31,7 @@ jobs:
           username: ${{ secrets.MAILUSERNAME }}
           password: ${{ secrets.MAILPASSWORD }}
           subject: 市场收益
-          body: file://suggestion/suggestion*.txt
+          body: file://suggestion/suggestion.txt
           to: 568654196@qq.com
           from: GitHub Actions
           content_type: text/plain
