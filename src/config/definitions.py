@@ -75,7 +75,7 @@ NORMAL_LOGGER = os.path.join(LOG_PATH, 'log_' + DATE_TIME + PRICE_SECTION + '.lo
 
 # suggestion file
 SUGGESTION_PATH = "suggestion"
-SUGGESTION_LOGGER = os.path.join(SUGGESTION_PATH, 'suggestion_' + DATE_TIME + PRICE_SECTION + '.txt')
+SUGGESTION_LOGGER = os.path.join(SUGGESTION_PATH, 'suggestion' + '.txt')
 
 # cache file
 CACHE_DIR = 'cache'
