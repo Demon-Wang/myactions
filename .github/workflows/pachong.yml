@@ -28,9 +28,9 @@ jobs:
         with:
           server_address: smtp.qq.com
           server_port: 465
-          username: ${{ secrets.MAIL_USERNAME }}
-          password: ${{ secrets.MAIL_PASSWORD }}
-          subject: CSDN Report
+          username: ${{ secrets.MAILUSERNAME }}
+          password: ${{ secrets.MAILPASSWORD }}
+          subject: 市场收益
           body: file://suggestion/suggestion*.txt
           to: 568654196@qq.com
           from: GitHub Actions
