@@ -3,9 +3,9 @@ name: 'qiandao'
 on:
   push:
     branches: 
-      - main
-  schedule:
-    - cron: '0 17 * * *'
+      - niubi
+  #schedule:
+   # - cron: '0 17 * * *'
 
 jobs:
   qiandao:
